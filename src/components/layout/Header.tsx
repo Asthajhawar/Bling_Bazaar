@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BUSINESS, getWhatsAppLink } from '../../config/business';
 import { MessageCircle } from 'lucide-react';
-import FavLogoIcon from '../../assets/Fav Logo Icon 3.png';
+import FavLogoIcon from '../../assets/FAV Logo Icon 3.png';
 
 export function Header() {
   const [visible, setVisible] = useState(false);
