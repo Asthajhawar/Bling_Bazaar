@@ -1,22 +1,22 @@
-# Shringaar — Indian Imitation Jewellery
+# Bling Bazaar — Premium Imitation Jewellery
 
-A luxury Indian-ethnic single-page website for an imitation jewellery business specializing in Jhumkas, Necklaces, Studs, and more. Designed for the Bihar/Indian market with a focus on premium aesthetics and easy WhatsApp ordering.
+A luxury Indian-ethnic single-page website for an imitation jewellery business specializing in Jhumkas, Necklaces, Set, and more. Designed for a premium aesthetic with a focus on ease of inquiry via WhatsApp.
 
 ## 🌟 Features
 
-- **Royal Aesthetic**: Rich gold (#C9A84C), ivory, and deep maroon color palette.
-- **GSAP Radial Gallery**: A high-end, scroll-driven circular product showcase.
-- **Responsive Design**: Optimized for mobile, tablet, and desktop viewing.
-- **WhatsApp Integration**: Single-click "Order Now" links that pre-fill product details.
-- **Sticky Header**: Elegant navigation and quick-access branding.
-- **Fixed WhatsApp Widget**: Pulse-animated button for instant customer support.
+- **Premium Aesthetic**: Rich gold (#C9A84C), ivory, and deep charcoal color palette with shimmer effects.
+- **Framer Motion Gallery**: A high-end, scroll-driven horizontal product carousel with parallax effects.
+- **Responsive Layout**: Mobile-first design with optimized grid views for smaller screens.
+- **WhatsApp Integration**: Single-click "Order Now" / "Inquiry" links that pre-fill product details.
+- **Sticky Header**: Elegant navigation featuring the corporate logo.
+- **Dynamic Content**: Data-driven product sections and Instagram integration.
 - **SEO Ready**: Proper meta tags, semantic HTML, and Google Fonts integration.
 
 ## 🛠️ Tech Stack
 
 - **Framework**: Vite + React (TypeScript)
 - **Styling**: Tailwind CSS v4
-- **Animations**: GSAP (GreenSock) with ScrollTrigger
+- **Animations**: Framer Motion & GSAP
 - **Icons**: Lucide React + Custom SVGs
 - **Fonts**: Playfair Display (Headings) & DM Sans (Body)
 
@@ -27,21 +27,26 @@ A luxury Indian-ethnic single-page website for an imitation jewellery business s
    npm install
    ```
 
-2. **Run Development Server**:
+2. **Configure Environment**:
+   Create a `.env` file based on your business details:
+   ```env
+   VITE_BUSINESS_NAME=Your Brand Name
+   VITE_BUSINESS_TAGLINE=Your Tagline
+   VITE_WHATSAPP_NUMBER=91XXXXXXXXXX
+   VITE_PHONE=+91-XXXXXXXXXX
+   VITE_INSTAGRAM=your_handle
+   ```
+
+3. **Run Development Server**:
    ```bash
    npm run dev
    ```
 
-3. **Build for Production**:
+4. **Build for Production**:
    ```bash
    npm run build
    ```
 
-## 📋 Business Configuration
-
-All branding and contact information is centralized. To change the phone number, WhatsApp, or Instagram handle, edit:
-`src/config/business.ts`
-
 ---
 
-*Bihar ki Pehchan, Gehne ki Shaan.*
+*Style That Sparkles.*

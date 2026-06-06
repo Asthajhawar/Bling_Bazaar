@@ -1,6 +1,6 @@
 # Project Structure & File Usage
 
-This document provides a map of the repository and explains the purpose of each file in the **Shringaar** project.
+This document provides a map of the repository and explains the purpose of each file in the **Bling Bazaar** project.
 
 ## 📁 Repository Map
 
@@ -10,6 +10,7 @@ This document provides a map of the repository and explains the purpose of each 
 ├── node_modules/        # Installed dependencies
 ├── public/              # Static assets (favicons, etc.)
 ├── src/                 # Source code
+│   ├── assets/          # Product images & corporate logos
 │   ├── components/      # UI Components
 │   │   ├── layout/      # General layout elements (Header, etc.)
 │   │   ├── sections/    # Individual page sections
@@ -19,9 +20,9 @@ This document provides a map of the repository and explains the purpose of each 
 │   ├── index.css        # Tailwind v4 globals & custom animations
 │   ├── main.tsx         # React entry point
 │   └── vite-env.d.ts    # TS environment definitions
+├── .env                 # Business configuration variables
 ├── index.html           # Root HTML template (Headings & SEO)
 ├── package.json         # Scripts and dependencies
-├── tailwind.config.js   # Tailwind legacy config (if needed)
 ├── tsconfig.json        # TypeScript configuration
 └── vite.config.ts       # Vite + Tailwind v4 plugin config
 ```
@@ -29,26 +30,26 @@ This document provides a map of the repository and explains the purpose of each 
 ## 📄 File-by-File Usage
 
 ### ⚙️ Configuration
-- **`src/config/business.ts`**: The single source of truth for business details.
+- **`src/config/business.ts`**: The single source of truth for business details, now driven by environment variables.
   - Contains `BUSINESS` object (name, phone, whatsapp number, instagram).
   - Provides helper functions `getWhatsAppLink()` and `getInstagramLink()`.
 
 ### 🏗️ Layout & Assembly
-- **`src/App.tsx`**: The main page wrapper. It imports every section component and stacks them. It also hosts the fixed/floating WhatsApp pulsed button.
-- **`src/components/layout/Header.tsx`**: A sticky navigation bar that appears only after the user scrolls past the Hero section.
+- **`src/App.tsx`**: The main page wrapper. It imports every section component and stacks them.
+- **`src/components/layout/Header.tsx`**: A sticky navigation bar that appears only after scrolling, now featuring the corporate logo.
 
 ### 🖼️ Page Sections (`src/components/sections/`)
-- **`Hero.tsx`**: Full-viewport landing with gold shimmer text, animated floating gold particles, and primary CTA buttons.
-- **`Marquee.tsx`**: CSS-animated infinite ticker for categories (Jhumkas, Bangles, etc.).
+- **`Hero.tsx`**: Full-viewport landing with gold shimmer text, animated particles, and primary CTA buttons.
+- **`Marquee.tsx`**: CSS-animated infinite ticker for categories.
 - **`Features.tsx`**: Grid of USP cards (COD, Shipping, etc.).
 - **`Gallery.tsx`**: Wrapper for the main product showcase.
-- **`HowToOrder.tsx`**: 3-step visualization of the screenshot-and-whatsapp workflow.
-- **`Instagram.tsx`**: Social proof grid with custom SVG branding.
-- **`Footer.tsx`**: Comprehensive bottom section with quick links and contact info.
+- **`HowToOrder.tsx`**: Step-by-step guide for ordering via WhatsApp.
+- **`Instagram.tsx`**: Social proof grid with custom visual branding.
+- **`Footer.tsx`**: Bottom section with quick links and contact info.
 
 ### 🧩 UI Components (`src/components/ui/`)
-- **`portfolio-and-image-gallery.tsx`**: Houses the `RadialScrollGallery`. This is the most complex component, using **GSAP ScrollTrigger** to rotate cards in an arc as the user scrolls.
-- **`badge.tsx`**: Small reusable pill for product categories (e.g., "Earrings").
+- **`portfolio-and-image-gallery.tsx`**: Houses the `HorizontalScrollCarousel`. This component uses **Framer Motion** for high-performance scroll-driven animations and parallax effects.
+- **`badge.tsx`**: Small reusable pill for product categories.
 
 ### 🎨 Styling
-- **`src/index.css`**: Defines the Tailwind v4 theme, CSS variables for colors (Gold, Maroon, Ivory), and custom keyframe animations (`gold-shimmer`, `pulse-ring`, `marquee`).
+- **`src/index.css`**: Defines the Tailwind v4 theme, CSS variables for colors (Gold, Charcoal, Ivory), and custom keyframe animations.
