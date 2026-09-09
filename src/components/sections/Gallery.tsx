@@ -33,10 +33,10 @@ import PearlString from '../../assets/products/Pearl String.png';
 import PearlMoon from '../../assets/products/Pearl Moon.png';
 import RedSnakeWatch from '../../assets/products/Red Snake Watch.png';
 import StringsJhumka from '../../assets/products/Strings Jhumka.png';
-import BlackFlowerString from '../../assets/products/Black Flower String.png';
-import BlueFlowerString from '../../assets/products/Blue Flower String.png';
-import ClearFlowerString from '../../assets/products/Clear Flower String.png';
-import IndigoFlowerString from '../../assets/products/Indigo Flower String.png';
+import BlackFlowerString from '../../assets/products/Black Flower string.png';
+import BlueFlowerString from '../../assets/products/Blue Flower string.png';
+import ClearFlowerString from '../../assets/products/Clear Flower string.png';
+import IndigoFlowerString from '../../assets/products/Indigo Flower string.png';
 import PinkFlowerString from '../../assets/products/Pink Flower string .png';
 
 
