@@ -48,6 +48,7 @@ const products: GalleryItem[] = [
     image: BabyPinkSwan, // TODO: Replace with actual product photo
     title: 'Baby Pink Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -55,6 +56,7 @@ const products: GalleryItem[] = [
     image: BlackSwan, // TODO: Replace with actual product photo
     title: 'Black Swan',
     category: 'Earrings', 
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -62,6 +64,7 @@ const products: GalleryItem[] = [
     image: GreenSwan, // TODO: Replace with actual product photo
     title: 'Green Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -69,6 +72,7 @@ const products: GalleryItem[] = [
     image: MoonBell, // TODO: Replace with actual product photo
     title: 'Moon Bell',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹149',
   },
   {
@@ -76,6 +80,7 @@ const products: GalleryItem[] = [
     image: MulticoulorLeaflet, // TODO: Replace with actual product photo
     title: 'Multicoulor Leaflet',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹55',
   },
   {
@@ -83,6 +88,7 @@ const products: GalleryItem[] = [
     image: PinkSwan, // TODO: Replace with actual product photo
     title: 'Pink Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -90,6 +96,7 @@ const products: GalleryItem[] = [
     image: RedSwan, // TODO: Replace with actual product photo
     title: 'Red Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -97,6 +104,7 @@ const products: GalleryItem[] = [
     image: SwanBell, // TODO: Replace with actual product photo
     title: 'Swan Bell',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹39',
   },
   {
@@ -104,6 +112,7 @@ const products: GalleryItem[] = [
     image: TealSwan, // TODO: Replace with actual product photo
     title: 'Teal Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -111,6 +120,7 @@ const products: GalleryItem[] = [
     image: YellowSwan, // TODO: Replace with actual product photo
     title: 'Yellow Swan',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹49',
   },
   {
@@ -118,6 +128,7 @@ const products: GalleryItem[] = [
     image: RingBell,
     title: 'Ring Bell',
     category: 'Earrings',
+    subCategory: 'oxidized',
     priceRange: '₹99',
   },
   {
@@ -125,6 +136,7 @@ const products: GalleryItem[] = [
     image: RedHairHook,
     title: 'Red Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -132,6 +144,7 @@ const products: GalleryItem[] = [
     image: YellowHairHook,
     title: 'Yellow Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -139,6 +152,7 @@ const products: GalleryItem[] = [
     image: BlackHairHook,
     title: 'Black Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -146,6 +160,7 @@ const products: GalleryItem[] = [
     image: BlueHairHook,
     title: 'Blue Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -153,6 +168,7 @@ const products: GalleryItem[] = [
     image: GreenHairHook,
     title: 'Green Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -160,6 +176,7 @@ const products: GalleryItem[] = [
     image: BrownHairHook,
     title: 'Brown Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -167,13 +184,15 @@ const products: GalleryItem[] = [
     image: LightPinkHairHook,
     title: 'Light Pink Hair Hook Jhumka',
     category: 'Earring Studs Accessories',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
     id: 'pink-hair-hook',
     image: PinkHairHook,
-    title: 'Pink Hair Hook Jhumka',
+    title: 'Pink Hair Hook Jhumka', 
     category: 'Set',
+    subCategory: 'oxidized',
     priceRange: '₹79',
   },
   {
@@ -181,6 +200,7 @@ const products: GalleryItem[] = [
     image: LightPinkSet,
     title: 'Light Pink Set',
     category: 'Set',
+    subCategory:"oxidized",
     priceRange: '₹59',
   },
   {
@@ -188,6 +208,7 @@ const products: GalleryItem[] = [
     image: DarkPinkSet,
     title: 'Dark Pink Set',
     category: 'Set',
+    subCategory:"oxidized",
     priceRange: '₹59',
   },
   {
@@ -195,6 +216,7 @@ const products: GalleryItem[] = [
     image: RedSet,
     title: 'Red Set',
     category: 'Set',
+    subCategory:"oxidized",
     priceRange: '₹59',
   },
   {
@@ -202,6 +224,7 @@ const products: GalleryItem[] = [
     image: GreenSet,
     title: 'Green Set',
     category: 'Set',
+    subCategory:"oxidized",
     priceRange: '₹59',
   },
   {
@@ -209,6 +232,7 @@ const products: GalleryItem[] = [
     image: TealSet,
     title: 'Teal Set',
     category: 'Set',
+    subCategory:"oxidized",
     priceRange: '₹59',
   },
   {
@@ -216,6 +240,7 @@ const products: GalleryItem[] = [
     image: BlackSnakeWatch,
     title: 'Black Snake Watch',
     category: 'Watches',
+    subCategory: 'western',
     priceRange: '₹599',
   },
   {
@@ -223,6 +248,7 @@ const products: GalleryItem[] = [
     image: GoldSnakeWatch,
     title: 'Gold Snake Watch',
     category: 'Watches',
+    subCategory: 'western',
     priceRange: '₹599',
   },
   {
@@ -230,6 +256,7 @@ const products: GalleryItem[] = [
     image: GreenSnakeWatch,
     title: 'Green Snake Watch',
     category: 'Watches',
+    subCategory: 'western',
     priceRange: '₹599',
   },
   {
@@ -237,6 +264,7 @@ const products: GalleryItem[] = [
     image: RedSnakeWatch,
     title: 'Red Snake Watch',
     category: 'Watches',
+    subCategory: 'western',
     priceRange: '₹599',
   },
   {
@@ -244,6 +272,7 @@ const products: GalleryItem[] = [
     image: OvalEarings,
     title: 'Oval Earings',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
   {
@@ -251,6 +280,7 @@ const products: GalleryItem[] = [
     image: PearlEarings,
     title: 'Pearl Earings',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹149',
   },
   {
@@ -258,6 +288,7 @@ const products: GalleryItem[] = [
     image: PearlString,
     title: 'Pearl String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹149',
   },
   {
@@ -265,6 +296,7 @@ const products: GalleryItem[] = [
     image: PearlMoon,
     title: 'Pearl Moon',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹199',
   },
   {
@@ -272,6 +304,7 @@ const products: GalleryItem[] = [
     image: StringsJhumka,
     title: 'Strings Jhumka',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹299',
   },
   {
@@ -279,6 +312,7 @@ const products: GalleryItem[] = [
     image: BlackFlowerString,
     title: 'Black Flower String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
   {
@@ -286,6 +320,7 @@ const products: GalleryItem[] = [
     image: BlueFlowerString,
     title: 'Blue Flower String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
   {
@@ -293,6 +328,7 @@ const products: GalleryItem[] = [
     image: ClearFlowerString,
     title: 'Clear Flower String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
   {
@@ -300,6 +336,7 @@ const products: GalleryItem[] = [
     image: IndigoFlowerString,
     title: 'Indigo Flower String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
   {
@@ -307,6 +344,7 @@ const products: GalleryItem[] = [
     image: PinkFlowerString,
     title: 'Pink Flower String',
     category: 'Earrings',
+    subCategory: 'western',
     priceRange: '₹249',
   },
 ];
