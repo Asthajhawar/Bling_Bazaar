@@ -24,6 +24,15 @@ import LightPinkSet from '../../assets/products/Light Pink Set.png';
 import RedSet from '../../assets/products/Red Set.png';
 import GreenSet from '../../assets/products/Green Set.png';
 import TealSet from '../../assets/products/Teal Set.png';
+import BlackSnakeWatch from '../../assets/products/Black Snake Watch.png';
+import GoldSnakeWatch from '../../assets/products/Gold Snake Watch.png';
+import GreenSnakeWatch from '../../assets/products/Green Snake Watch.png';
+import OvalEarings from '../../assets/products/Oval Earings.png';
+import PearlEarings from '../../assets/products/Pearl Earings.png';
+import PearlString from '../../assets/products/Pearl String.png';
+import PearlMoon from '../../assets/products/Pearl Moon.png';
+import RedSnakeWatch from '../../assets/products/Red Snake Watch.png';
+import StringsJhumka from '../../assets/products/Strings Jhumka.png';
 
 
 // TODO: Replace all Unsplash URLs with actual product photos
@@ -196,7 +205,69 @@ const products: GalleryItem[] = [
     category: 'Set',
     priceRange: '₹59',
   },
-  
+  {
+    id: 'black-snake-watch',
+    image: BlackSnakeWatch,
+    title: 'Black Snake Watch',
+    category: 'Watches',
+    priceRange: '₹599',
+  },
+  {
+    id: 'gold-snake-watch',
+    image: GoldSnakeWatch,
+    title: 'Gold Snake Watch',
+    category: 'Watches',
+    priceRange: '₹599',
+  },
+  {
+    id: 'green-snake-watch',
+    image: GreenSnakeWatch,
+    title: 'Green Snake Watch',
+    category: 'Watches',
+    priceRange: '₹599',
+  },
+  {
+    id: 'red-snake-watch',
+    image: RedSnakeWatch,
+    title: 'Red Snake Watch',
+    category: 'Watches',
+    priceRange: '₹599',
+  },
+  {
+    id: 'oval-earings',
+    image: OvalEarings,
+    title: 'Oval Earings',
+    category: 'Earrings',
+    priceRange: '₹249',
+  },
+  {
+    id: 'pearl-earings',
+    image: PearlEarings,
+    title: 'Pearl Earings',
+    category: 'Earrings',
+    priceRange: '₹149',
+  },
+  {
+    id: 'pearl-string',
+    image: PearlString,
+    title: 'Pearl String',
+    category: 'Earrings',
+    priceRange: '₹149',
+  },
+  {
+    id: 'pearl-moon',
+    image: PearlMoon,
+    title: 'Pearl Moon',
+    category: 'Earrings',
+    priceRange: '₹199',
+  },
+  {
+    id: 'strings-jhumka',
+    image: StringsJhumka,
+    title: 'Strings Jhumka',
+    category: 'Earrings',
+    priceRange: '₹299',
+  },
 ];
 
 export function Gallery() {
