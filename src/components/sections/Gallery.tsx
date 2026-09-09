@@ -37,7 +37,7 @@ import BlackFlowerString from '../../assets/products/Black Flower string.png';
 import BlueFlowerString from '../../assets/products/Blue Flower string.png';
 import ClearFlowerString from '../../assets/products/Clear Flower string.png';
 import IndigoFlowerString from '../../assets/products/Indigo Flower string.png';
-import PinkFlowerString from '../../assets/products/Pink Flower string .png';
+import PinkFlowerString from '../../assets/products/Pink Flower string.png';
 
 
 
