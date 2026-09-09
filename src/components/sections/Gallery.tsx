@@ -33,6 +33,12 @@ import PearlString from '../../assets/products/Pearl String.png';
 import PearlMoon from '../../assets/products/Pearl Moon.png';
 import RedSnakeWatch from '../../assets/products/Red Snake Watch.png';
 import StringsJhumka from '../../assets/products/Strings Jhumka.png';
+import BlackFlowerString from '../../assets/products/Black Flower String.png';
+import BlueFlowerString from '../../assets/products/Blue Flower String.png';
+import ClearFlowerString from '../../assets/products/Clear Flower String.png';
+import IndigoFlowerString from '../../assets/products/Indigo Flower String.png';
+import PinkFlowerString from '../../assets/products/Pink Flower String.png';
+
 
 
 // TODO: Replace all Unsplash URLs with actual product photos
@@ -267,6 +273,41 @@ const products: GalleryItem[] = [
     title: 'Strings Jhumka',
     category: 'Earrings',
     priceRange: '₹299',
+  },
+  {
+    id: 'black-flower-string',
+    image: BlackFlowerString,
+    title: 'Black Flower String',
+    category: 'Earrings',
+    priceRange: '₹249',
+  },
+  {
+    id: 'blue-flower-string',
+    image: BlueFlowerString,
+    title: 'Blue Flower String',
+    category: 'Earrings',
+    priceRange: '₹249',
+  },
+  {
+    id: 'clear-flower-string',
+    image: ClearFlowerString,
+    title: 'Clear Flower String',
+    category: 'Earrings',
+    priceRange: '₹249',
+  },
+  {
+    id: 'indigo-flower-string',
+    image: IndigoFlowerString,
+    title: 'Indigo Flower String',
+    category: 'Earrings',
+    priceRange: '₹249',
+  },
+  {
+    id: 'pink-flower-string',
+    image: PinkFlowerString,
+    title: 'Pink Flower String',
+    category: 'Earrings',
+    priceRange: '₹249',
   },
 ];
 
