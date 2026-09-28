@@ -1,358 +1,102 @@
-import { HorizontalScrollCarousel, type GalleryItem } from '../ui/portfolio-and-image-gallery';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { getCategoryMeta, type CategoryMeta } from '../../data/products';
 
-import BabyPinkSwan from '../../assets/products/BabyPink Swan.png';
-import BlackSwan from '../../assets/products/Black Swan.png';
-import GreenSwan from '../../assets/products/Green Swan.png';
-import MoonBell from '../../assets/products/Moon Bell.png';
-import MulticoulorLeaflet from '../../assets/products/Multicoulor Leaflet.png';
-import PinkSwan from '../../assets/products/Pink Swan.png';
-import RedSwan from '../../assets/products/Red Swan.png';
-import SwanBell from '../../assets/products/Swan Bell.png';
-import TealSwan from '../../assets/products/Teal Swan.png';
-import YellowSwan from '../../assets/products/Yellow Swan.png';
-import RingBell from '../../assets/products/Ring Bell.png'; 
-import RedHairHook from '../../assets/products/Red Hair Hook Jhumka.png';
-import YellowHairHook from '../../assets/products/Yellow Hair Hook Jhumka.png';
-import BlackHairHook from '../../assets/products/Black Hair Hook Jhumka.png';
-import BlueHairHook from '../../assets/products/Blue Hair Hook Jhumka.png';
-import GreenHairHook from '../../assets/products/Green Hair Hook Jhumka.png';
-import BrownHairHook from '../../assets/products/Brown Hair Hook Jhumka.png';
-import LightPinkHairHook from '../../assets/products/Light Pink Hair Hook Jhumka.png';
-import PinkHairHook from '../../assets/products/Pink Hair Hook Jhumka.png';
-import DarkPinkSet from '../../assets/products/Dark Pink Set.png';
-import LightPinkSet from '../../assets/products/Light Pink Set.png';
-import RedSet from '../../assets/products/Red Set.png';
-import GreenSet from '../../assets/products/Green Set.png';
-import TealSet from '../../assets/products/Teal Set.png';
-import BlackSnakeWatch from '../../assets/products/Black Snake Watch.png';
-import GoldSnakeWatch from '../../assets/products/Gold Snake Watch.png';
-import GreenSnakeWatch from '../../assets/products/Green Snake Watch.png';
-import OvalEarings from '../../assets/products/Oval Earings.png';
-import PearlEarings from '../../assets/products/Pearl Earings.png';
-import PearlString from '../../assets/products/Pearl String.png';
-import PearlMoon from '../../assets/products/Pearl Moon.png';
-import RedSnakeWatch from '../../assets/products/Red Snake Watch.png';
-import StringsJhumka from '../../assets/products/Strings Jhumka.png';
-import BlackFlowerString from '../../assets/products/Black Flower string.png';
-import BlueFlowerString from '../../assets/products/Blue Flower string.png';
-import ClearFlowerString from '../../assets/products/Clear Flower string.png';
-import IndigoFlowerString from '../../assets/products/Indigo Flower string.png';
-import PinkFlowerString from '../../assets/products/Pink Flower string.png';
-
-
-
-// TODO: Replace all Unsplash URLs with actual product photos
-const products: GalleryItem[] = [
-  {
-    id: 'baby-pink-swan',
-    image: BabyPinkSwan, // TODO: Replace with actual product photo
-    title: 'Baby Pink Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'black-swan',
-    image: BlackSwan, // TODO: Replace with actual product photo
-    title: 'Black Swan',
-    category: 'Earrings', 
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'green-swan',
-    image: GreenSwan, // TODO: Replace with actual product photo
-    title: 'Green Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'moon-bell',
-    image: MoonBell, // TODO: Replace with actual product photo
-    title: 'Moon Bell',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹149',
-  },
-  {
-    id: 'multicolor-leaflet',
-    image: MulticoulorLeaflet, // TODO: Replace with actual product photo
-    title: 'Multicoulor Leaflet',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹55',
-  },
-  {
-    id: 'pink-swan',
-    image: PinkSwan, // TODO: Replace with actual product photo
-    title: 'Pink Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'red-swan',
-    image: RedSwan, // TODO: Replace with actual product photo
-    title: 'Red Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'swan-bell',
-    image: SwanBell, // TODO: Replace with actual product photo
-    title: 'Swan Bell',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹39',
-  },
-  {
-    id: 'teal-swan',
-    image: TealSwan, // TODO: Replace with actual product photo
-    title: 'Teal Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'yellow-swan',
-    image: YellowSwan, // TODO: Replace with actual product photo
-    title: 'Yellow Swan',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹49',
-  },
-  {
-    id: 'ring-bell',
-    image: RingBell,
-    title: 'Ring Bell',
-    category: 'Earrings',
-    subCategory: 'oxidized',
-    priceRange: '₹99',
-  },
-  {
-    id: 'red-hair-hook',
-    image: RedHairHook,
-    title: 'Red Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'yellow-hair-hook',
-    image: YellowHairHook,
-    title: 'Yellow Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'black-hair-hook',
-    image: BlackHairHook,
-    title: 'Black Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'blue-hair-hook',
-    image: BlueHairHook,
-    title: 'Blue Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'green-hair-hook',
-    image: GreenHairHook,
-    title: 'Green Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'brown-hair-hook',
-    image: BrownHairHook,
-    title: 'Brown Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'light-pink-hair-hook',
-    image: LightPinkHairHook,
-    title: 'Light Pink Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'pink-hair-hook',
-    image: PinkHairHook,
-    title: 'Pink Hair Hook Jhumka', 
-    category: 'Set',
-    subCategory: 'oxidized',
-    priceRange: '₹79',
-  },
-  {
-    id: 'light-pink-set',
-    image: LightPinkSet,
-    title: 'Light Pink Set',
-    category: 'Set',
-    subCategory:"oxidized",
-    priceRange: '₹59',
-  },
-  {
-    id: 'dark-pink-set',
-    image: DarkPinkSet,
-    title: 'Dark Pink Set',
-    category: 'Set',
-    subCategory:"oxidized",
-    priceRange: '₹59',
-  },
-  {
-    id: 'red-set',
-    image: RedSet,
-    title: 'Red Set',
-    category: 'Set',
-    subCategory:"oxidized",
-    priceRange: '₹59',
-  },
-  {
-    id: 'green-set',
-    image: GreenSet,
-    title: 'Green Set',
-    category: 'Set',
-    subCategory:"oxidized",
-    priceRange: '₹59',
-  },
-  {
-    id: 'teal-set',
-    image: TealSet,
-    title: 'Teal Set',
-    category: 'Set',
-    subCategory:"oxidized",
-    priceRange: '₹59',
-  },
-  {
-    id: 'black-snake-watch',
-    image: BlackSnakeWatch,
-    title: 'Black Snake Watch',
-    category: 'Watches',
-    subCategory: 'western',
-    priceRange: '₹599',
-  },
-  {
-    id: 'gold-snake-watch',
-    image: GoldSnakeWatch,
-    title: 'Gold Snake Watch',
-    category: 'Watches',
-    subCategory: 'western',
-    priceRange: '₹599',
-  },
-  {
-    id: 'green-snake-watch',
-    image: GreenSnakeWatch,
-    title: 'Green Snake Watch',
-    category: 'Watches',
-    subCategory: 'western',
-    priceRange: '₹599',
-  },
-  {
-    id: 'red-snake-watch',
-    image: RedSnakeWatch,
-    title: 'Red Snake Watch',
-    category: 'Watches',
-    subCategory: 'western',
-    priceRange: '₹599',
-  },
-  {
-    id: 'oval-earings',
-    image: OvalEarings,
-    title: 'Oval Earings',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-  {
-    id: 'pearl-earings',
-    image: PearlEarings,
-    title: 'Pearl Earings',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹149',
-  },
-  {
-    id: 'pearl-string',
-    image: PearlString,
-    title: 'Pearl String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹149',
-  },
-  {
-    id: 'pearl-moon',
-    image: PearlMoon,
-    title: 'Pearl Moon',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹199',
-  },
-  {
-    id: 'strings-jhumka',
-    image: StringsJhumka,
-    title: 'Strings Jhumka',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹299',
-  },
-  {
-    id: 'black-flower-string',
-    image: BlackFlowerString,
-    title: 'Black Flower String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-  {
-    id: 'blue-flower-string',
-    image: BlueFlowerString,
-    title: 'Blue Flower String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-  {
-    id: 'clear-flower-string',
-    image: ClearFlowerString,
-    title: 'Clear Flower String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-  {
-    id: 'indigo-flower-string',
-    image: IndigoFlowerString,
-    title: 'Indigo Flower String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-  {
-    id: 'pink-flower-string',
-    image: PinkFlowerString,
-    title: 'Pink Flower String',
-    category: 'Earrings',
-    subCategory: 'western',
-    priceRange: '₹249',
-  },
-];
-
-export function Gallery() {
+// ─── Category card ─────────────────────────────────────────────────
+function CategoryCard({
+  category,
+  index,
+}: {
+  category: CategoryMeta;
+  index: number;
+}) {
   return (
-    <section id="gallery">
-      <HorizontalScrollCarousel items={products} />
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <Link
+        to={`/category/${category.slug}`}
+        className="group relative block h-[320px] sm:h-[380px] md:h-[440px] overflow-hidden rounded-3xl bg-white ring-1 ring-gold/20 shadow-xl hover:shadow-2xl hover:shadow-gold/15 transition-all duration-500"
+      >
+        {/* Top shimmer */}
+        <div className="pointer-events-none absolute inset-0 z-10 rounded-3xl bg-gradient-to-b from-gold/10 via-transparent to-transparent" />
+
+        {/* Cover image */}
+        <img
+          src={category.coverImage}
+          alt={category.name}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          draggable={false}
+        />
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+
+        {/* Content */}
+        <div className="absolute inset-x-0 bottom-0 z-30 p-5 sm:p-6">
+          <div className="mb-2 flex items-center gap-2">
+            <span className="inline-block rounded-full bg-gold/20 px-3 py-0.5 font-body text-[10px] font-medium text-gold-light uppercase tracking-wider">
+              {category.count} {category.count === 1 ? 'piece' : 'pieces'}
+            </span>
+          </div>
+          <h3 className="font-display text-2xl sm:text-3xl text-white mb-1 leading-tight">
+            {category.name}
+          </h3>
+          <p className="font-body text-sm text-gold-light/80 mb-4">
+            Starting from {category.priceRange}
+          </p>
+
+          {/* CTA */}
+          <div className="flex items-center gap-2 font-body text-sm font-semibold text-gold group-hover:text-gold-light transition-colors">
+            <span>Explore Collection</span>
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </div>
+        </div>
+
+        {/* Hover glow */}
+        <div className="pointer-events-none absolute inset-0 z-10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ring-2 ring-gold/30" />
+      </Link>
+    </motion.div>
+  );
+}
+
+// ─── Gallery section (homepage) ────────────────────────────────────
+export function Gallery() {
+  const categories = getCategoryMeta();
+
+  return (
+    <section id="gallery" className="bg-ivory py-16 sm:py-24">
+      {/* Heading */}
+      <div className="mb-12 sm:mb-16 text-center px-4">
+        <p className="mb-2 font-body text-sm uppercase tracking-[0.2em] text-gold">
+          Curated for You
+        </p>
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal">
+          Our <span className="gold-shimmer">Collection</span>
+        </h2>
+        <div className="ornamental-divider mx-auto mt-4 max-w-xs">
+          <span className="text-lg text-gold">✦</span>
+        </div>
+        <p className="mt-4 max-w-md mx-auto font-body text-sm text-charcoal/60">
+          Explore our handpicked categories of exquisite jewellery
+        </p>
+      </div>
+
+      {/* Category grid */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {categories.map((cat, i) => (
+            <CategoryCard key={cat.slug} category={cat} index={i} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

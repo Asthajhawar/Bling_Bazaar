@@ -1,18 +1,27 @@
 import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { BUSINESS, getWhatsAppLink } from '../../config/business';
 import { MessageCircle } from 'lucide-react';
 import FavLogoIcon from '../../assets/FAV Logo Icon 3.png';
 
 export function Header() {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
+    if (!isHome) {
+      // Always show header on non-home pages
+      setVisible(true);
+      return;
+    }
+
     const onScroll = () => {
       setVisible(window.scrollY > window.innerHeight * 0.85);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [isHome]);
 
   return (
     <header
@@ -24,7 +33,7 @@ export function Header() {
     >
       <div className="bg-maroon-dark/95 backdrop-blur-md border-b border-gold/20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-14 md:h-16">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img 
               src={FavLogoIcon} 
               alt="Bling Bazaar Logo" 
@@ -33,7 +42,7 @@ export function Header() {
             <span className="font-display text-gold text-xl md:text-2xl tracking-wide">
               {BUSINESS.name}
             </span>
-          </div>
+          </Link>
           <a
             href={getWhatsAppLink()}
             target="_blank"
