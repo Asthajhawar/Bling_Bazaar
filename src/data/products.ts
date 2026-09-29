@@ -36,6 +36,21 @@ import BlueFlowerString from '../assets/products/Blue Flower string.png';
 import ClearFlowerString from '../assets/products/Clear Flower string.png';
 import IndigoFlowerString from '../assets/products/Indigo Flower string.png';
 import PinkFlowerString from '../assets/products/Pink Flower string.png';
+import DivineJinglesGreen from '../assets/products/Divine Jingles - Green1.jpeg';
+import DivineJinglesMagenta from '../assets/products/Divine Jingles - Magenta02.jpeg';
+import DivineJinglesMaroon from '../assets/products/Divine Jingles - Maroon02.jpeg';
+import DivineJinglesRed from '../assets/products/Divine Jingles - Red02.jpeg';
+import GoldChandBaali from '../assets/products/Gold Chand baali.png';
+import IvoryBell from '../assets/products/Ivory Bell.png';
+import JewelChimes from '../assets/products/Jewel Chimes.png';
+import KashminFanBell from '../assets/products/Kashmiri Fan Bell.jpeg';
+import KashmiriWatchGreen from '../assets/products/Kashmiri Watch-Green01.png';
+import KashmiriWatchWhite from '../assets/products/Kashmiri Watch-White01.png';
+import OpalJhumkaGreen from '../assets/products/Opal Jhumka-Green01.png';
+import PearlBell from '../assets/products/Pearl bell.jpeg';
+import TempleSet from '../assets/products/Temple Set.png';
+import WTempleChimes from '../assets/products/W Temple Chimes.png';
+import KoreanCombo from '../assets/products/Korean combo.png';
 
 export interface GalleryItem {
   id: string;
@@ -139,7 +154,7 @@ export const products: GalleryItem[] = [
     id: 'red-hair-hook',
     image: RedHairHook,
     title: 'Red Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -147,7 +162,7 @@ export const products: GalleryItem[] = [
     id: 'yellow-hair-hook',
     image: YellowHairHook,
     title: 'Yellow Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -155,7 +170,7 @@ export const products: GalleryItem[] = [
     id: 'black-hair-hook',
     image: BlackHairHook,
     title: 'Black Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -163,7 +178,7 @@ export const products: GalleryItem[] = [
     id: 'blue-hair-hook',
     image: BlueHairHook,
     title: 'Blue Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -171,7 +186,7 @@ export const products: GalleryItem[] = [
     id: 'green-hair-hook',
     image: GreenHairHook,
     title: 'Green Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -179,7 +194,7 @@ export const products: GalleryItem[] = [
     id: 'brown-hair-hook',
     image: BrownHairHook,
     title: 'Brown Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -187,7 +202,7 @@ export const products: GalleryItem[] = [
     id: 'light-pink-hair-hook',
     image: LightPinkHairHook,
     title: 'Light Pink Hair Hook Jhumka',
-    category: 'Earring Studs Accessories',
+    category: 'Earring Chain',
     subCategory: 'oxidized',
     priceRange: '₹79',
   },
@@ -245,7 +260,7 @@ export const products: GalleryItem[] = [
     title: 'Black Snake Watch',
     category: 'Watches',
     subCategory: 'western',
-    priceRange: '₹599',
+    priceRange: '₹999',
   },
   {
     id: 'gold-snake-watch',
@@ -253,7 +268,7 @@ export const products: GalleryItem[] = [
     title: 'Gold Snake Watch',
     category: 'Watches',
     subCategory: 'western',
-    priceRange: '₹599',
+    priceRange: '₹999',
   },
   {
     id: 'green-snake-watch',
@@ -261,7 +276,7 @@ export const products: GalleryItem[] = [
     title: 'Green Snake Watch',
     category: 'Watches',
     subCategory: 'western',
-    priceRange: '₹599',
+    priceRange: '₹999',
   },
   {
     id: 'red-snake-watch',
@@ -269,7 +284,7 @@ export const products: GalleryItem[] = [
     title: 'Red Snake Watch',
     category: 'Watches',
     subCategory: 'western',
-    priceRange: '₹599',
+    priceRange: '₹999',
   },
   {
     id: 'oval-earings',
@@ -350,6 +365,128 @@ export const products: GalleryItem[] = [
     category: 'Earrings',
     subCategory: 'western',
     priceRange: '₹249',
+  },
+
+  // ─── TODO: Configure category, subCategory & priceRange for new items ───
+  {
+    id: 'divine-jingles-green',
+    image: DivineJinglesGreen,
+    title: 'Divine Jingles - Green',
+    category: 'Earrings', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹139', // TODO
+  },
+  {
+    id: 'divine-jingles-magenta',
+    image: DivineJinglesMagenta,
+    title: 'Divine Jingles - Magenta',
+    category: 'Earrings', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹139', // TODO
+  },
+  {
+    id: 'divine-jingles-maroon',
+    image: DivineJinglesMaroon,
+    title: 'Divine Jingles - Maroon',
+    category: 'Earrings', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹139', // TODO
+  },
+  {
+    id: 'divine-jingles-red',
+    image: DivineJinglesRed,
+    title: 'Divine Jingles - Red',
+    category: 'Earrings', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹139', // TODO
+  },
+  {
+    id: 'gold-chand-baali',
+    image: GoldChandBaali,
+    title: 'Gold Chand Baali',
+    category: 'Earrings', // TODO
+    subCategory: 'golden oxi', // TODO
+    priceRange: '₹129', // TODO
+  },
+  {
+    id: 'ivory-bell',
+    image: IvoryBell,
+    title: 'Ivory Bell',
+    category: 'Earrings', // TODO
+    subCategory: 'oxidized', // TODO
+    priceRange: '₹169', // TODO
+  },
+  {
+    id: 'jewel-chimes',
+    image: JewelChimes,
+    title: 'Jewel Chimes',
+    category: 'Earrings', // TODO
+    subCategory: 'golden oxi', // TODO
+    priceRange: '₹79', // TODO
+  },
+  {
+    id: 'kashmiri-fan-bell',
+    image: KashminFanBell,
+    title: 'Kashmiri Fan Bell',
+    category: 'Earrings', // TODO
+    subCategory: 'kashmiri', // TODO
+    priceRange: '₹199', // TODO
+  },
+  {
+    id: 'kashmiri-watch-green',
+    image: KashmiriWatchGreen,
+    title: 'Kashmiri Watch - Green',
+    category: 'Watches', // TODO
+    subCategory: 'kashmiri', // TODO
+    priceRange: '₹699', // TODO
+  },
+  {
+    id: 'kashmiri-watch-white',
+    image: KashmiriWatchWhite,
+    title: 'Kashmiri Watch - White',
+    category: 'Watches', // TODO
+    subCategory: 'kashmiri', // TODO
+    priceRange: '₹699', // TODO
+  },
+  {
+    id: 'opal-jhumka-green',
+    image: OpalJhumkaGreen,
+    title: 'Opal Jhumka - Green',
+    category: 'Earrings', // TODO
+    subCategory: 'golden oxi', // TODO
+    priceRange: '₹49', // TODO
+  },
+  {
+    id: 'pearl-bell',
+    image: PearlBell,
+    title: 'Pearl Bell',
+    category: 'Earrings', // TODO
+    subCategory: 'golden oxi', // TODO
+    priceRange: '₹139', // TODO
+  },
+  {
+    id: 'temple-set',
+    image: TempleSet,
+    title: 'Temple Set',
+    category: 'Set', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹159', // TODO
+  },
+  {
+    id: 'w-temple-chimes',
+    image: WTempleChimes,
+    title: 'W Temple Chimes',
+    category: 'Earrings', // TODO
+    subCategory: 'temple', // TODO
+    priceRange: '₹89', // TODO
+  },
+  {
+    id: 'korean-combo',
+    image: KoreanCombo,
+    title: 'Korean Combo',
+    category: 'Earrings', // TODO
+    subCategory: 'western', // TODO
+    priceRange: '₹109', // TODO
   },
 ];
 
