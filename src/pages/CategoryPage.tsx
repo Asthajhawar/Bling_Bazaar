@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Sparkles } from 'lucide-react';
@@ -71,6 +71,25 @@ export function CategoryPage() {
     ? getProductsByCategory(categoryName)
     : [];
   const subCategories = categoryName ? getSubCategories(categoryName) : [];
+
+  // Track whether the filter bar has more content to the right
+  const filterScrollRef = useRef<HTMLDivElement>(null);
+  const [hasMoreRight, setHasMoreRight] = useState(true);
+
+  useEffect(() => {
+    const el = filterScrollRef.current;
+    if (!el) return;
+    const check = () => {
+      setHasMoreRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+    };
+    check();
+    el.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check, { passive: true });
+    return () => {
+      el.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    };
+  }, [subCategories]);
 
   // Scroll to top on mount
   useEffect(() => {
@@ -147,32 +166,47 @@ export function CategoryPage() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="mb-8 sm:mb-12 flex justify-center"
+            className="mb-8 sm:mb-12"
           >
-            <ToggleGroup
-              type="single"
-              className="rounded-full border border-gold/20 bg-white/80 backdrop-blur-sm p-1.5 shadow-md shadow-gold/5"
-              value={activeFilter}
-              onValueChange={(val) => {
-                if (val) setActiveFilter(val);
-              }}
-            >
-              <ToggleGroupItem
-                value="all"
-                className="px-4 sm:px-6 capitalize"
+            {/* Scrollable filter bar — no visible scrollbar, fade-right hint */}
+            <div className="relative -mx-4 sm:mx-0">
+              {/* Hidden-scrollbar scroll track */}
+              <div
+                ref={filterScrollRef}
+                className="overflow-x-auto px-4 sm:px-0 sm:flex sm:justify-center"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                All
-              </ToggleGroupItem>
-              {subCategories.map((sub) => (
-                <ToggleGroupItem
-                  key={sub}
-                  value={sub}
-                  className="px-4 sm:px-6 capitalize"
+                <style>{'.filter-scroll::-webkit-scrollbar{display:none}'}</style>
+                <ToggleGroup
+                  type="single"
+                  className="filter-scroll inline-flex flex-shrink-0 rounded-full border border-gold/20 bg-white/80 backdrop-blur-sm p-1.5 shadow-md shadow-gold/5"
+                  value={activeFilter}
+                  onValueChange={(val) => {
+                    if (val) setActiveFilter(val);
+                  }}
                 >
-                  {sub}
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
+                  <ToggleGroupItem value="all" className="px-4 sm:px-6 capitalize">
+                    All
+                  </ToggleGroupItem>
+                  {subCategories.map((sub) => (
+                    <ToggleGroupItem
+                      key={sub}
+                      value={sub}
+                      className="px-4 sm:px-6 capitalize"
+                    >
+                      {sub}
+                    </ToggleGroupItem>
+                  ))}
+                </ToggleGroup>
+              </div>
+
+              {/* Right-fade gradient — only shown on mobile when more tabs exist */}
+              <div
+                className={`pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-ivory to-transparent transition-opacity duration-300 sm:hidden ${
+                  hasMoreRight ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            </div>
           </motion.div>
         )}
 
